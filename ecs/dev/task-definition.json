@@ -1,0 +1,20 @@
+{
+  "family": "my-app-dev",
+  "networkMode": "awsvpc",
+  "containerDefinitions": [
+    {
+      "name": "my-app",
+      "image": "my-app:latest",
+      "portMappings": [
+        {
+          "containerPort": 8080,
+          "hostPort": 8080
+        }
+      ],
+      "essential": true
+    }
+  ],
+  "requiresCompatibilities": ["FARGATE"],
+  "cpu": "256",
+  "memory": "512"
+}
